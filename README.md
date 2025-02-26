@@ -7,6 +7,6 @@ A pixel-drawing program with a twist.
 <ul>Created something pretty and functional</ul>
 <h3>Screenshot:</h3>
 <h3>Tools:</h3>
-<ul>Visual Studio Code, Git, Github, Pixabay, Prettier code formatter.</ul>
+<ul>Visual Studio Code, Git, Github, Pixabay, Flaticon.</ul>
 <h3>Credits (Pixabay):</h3>
 <ul>Color wheel from <a href="https://pixabay.com/users/thedigitalartist-202249/">TheDigitalArtist</a></ul>

@@ -4,7 +4,9 @@
 body {
 	margin: 0;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 #grid {
@@ -25,8 +27,14 @@ body {
 }
 
 .tile {
-	width: 35px; /*round(var(--background-width) / 16);*/
-	height: 35px;
 	background: black;
-	border-radius: 20%;
+	border-radius: 10%;
+}
+
+.footer {
+	width: 100%;
+	height: 75px;
+	background: lightgray;
+	text-align: center;
+	line-height: 0.5;
 }
