@@ -6,5 +6,5 @@ A pixel-drawing program with a twist.
 <ul>Learned more about flexbox</ul>
 <ul>Created something pretty and functional</ul>
 <h3>Tools:</h3>
-<ul>Visual Studio Code, Git, Github, Pixabay, Prettier code formatter.<ul>
-<h3>Screenshot:<h3>
+<ul>Visual Studio Code, Git, Github, Pixabay, Prettier code formatter.</ul>
+<h3>Screenshot:</h3>
