@@ -8,14 +8,30 @@
 		<link rel="icon" type="image/x-icon" href="./img/rainbow-icon.png" />
 	</head>
 	<body>
-		<div class="drawing-area">
-			<img
-				src="./img/color-wheel.jpg"
-				alt="Rainbow gradient"
-				width="560px"
-				id="background"
-			/>
-			<div id="grid"></div>
+		<div class="main">
+			<div class="drawing-area">
+				<img
+					src="./img/color-wheel.jpg"
+					alt="Rainbow gradient"
+					width="560px"
+					id="background"
+				/>
+				<div id="grid"></div>
+			</div>
+			<div class="generator">
+				<button>Generate a new grid</button>
+				<p>Pixel size:</p>
+				<input
+					type="range"
+					min="4"
+					max="70"
+					value="35"
+					class="slider"
+					id="pixelSize"
+				/>
+				<p>Hover mode/drag mode (toggle)</p>
+				<input type="checkbox" />
+			</div>
 		</div>
 		<div class="footer">
 			<p>Website by LSeaton</p>

@@ -2,13 +2,17 @@
 	--background-width: 600px;
 }
 body {
-	margin: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	background-image: url("./img/galaxy-rainbow.jpg");
+	background-size: cover;
+	margin-top: 50px;
 }
-
+p {
+	color: white;
+}
 #grid {
 	margin: 5px;
 	width: 560px;
@@ -17,13 +21,18 @@ body {
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	/*gap: 1px;*/
 	margin-top: -569px;
 }
 
 #background {
 	border-style: solid;
 	border-width: 5px;
+}
+
+.main {
+	display: flex;
+	gap: 20px;
+	align-items: center;
 }
 
 .tile {
