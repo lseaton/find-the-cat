@@ -7,6 +7,7 @@ let catHeight = -1;
 let catWidth = -1;
 
 populateGrid(16, true); //default
+document.getElementById("drawing-area").addEventListener("click", checkClick);
 
 function populateGrid(size, isCatMode) {
 	for (let i = 0; i < size * size; i++) {
@@ -21,6 +22,7 @@ function populateGrid(size, isCatMode) {
 	}
 	if (isCatMode) {
 		hideCat();
+		//add text over grid that says "free the cat!" and gives instructions, which disappears when mouse enters the grid"
 	}
 }
 
@@ -93,10 +95,18 @@ function foundCat() {
 }
 
 //Checks if a cat is under where they are clicking
-function checkClick() {
+function checkClick(event) {
 	let catImg = document.getElementById("cat-img");
 	if (catImg != null) {
-		//catImg.parentNode.removeChild(catImg);
-		console.log("check");
+		console.log(event.clientX + ", " + event.clientY); //event.target = the tile it's over
+		let rect = catImg.getBoundingClientRect();
+		if (
+			event.clientX >= rect.left &&
+			event.clientX <= rect.right &&
+			event.clientY >= rect.top &&
+			event.clientY <= rect.bottom
+		) {
+			console.log("within range");
+		}
 	}
 }
