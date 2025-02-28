@@ -2,7 +2,6 @@
 let gridSize = 35;
 function populateGrid(size) {
 	for (let i = 0; i < size * size; i++) {
-		//will be 256 instead of 50 for 16x16 grid
 		let d = document.createElement("div");
 		d.className = "tile";
 		d.id = "tile" + i.toString(); //unique ID
@@ -18,4 +17,23 @@ function revealColor(e) {
 	tile.style.background = "transparent";
 }
 
+function getRandomCatImg() {
+	//There are five cat images in cats folder
+	return "./img/cats/cat-" + (Math.floor(Math.random() * 5) + 1) + ".jpg";
+}
+
+function hideCat() {
+	//Hides a random cat photo behind the tiles on the grid
+	let cat = document.createElement("img");
+	cat.src = getRandomCatImg();
+	cat.style.width = "100px";
+	//Position cat in a random place within the drawing area
+	cat.style.position = "absolute";
+	cat.style.margin = "50px 0 0 -150px";
+
+	let grid = document.getElementById("grid");
+	let parentDiv = grid.parentNode;
+	parentDiv.insertBefore(cat, grid);
+}
+hideCat();
 populateGrid(gridSize);

@@ -12,6 +12,7 @@ body {
 p {
 	color: white;
 }
+
 #grid {
 	margin: 5px;
 	width: 560px;
@@ -33,10 +34,6 @@ p {
 	gap: 40px;
 }
 
-.generator {
-	/*border: 1px solid white;*/
-}
-
 #generateBtn {
 	background: #056ca3;
 	color: white;
@@ -56,6 +53,7 @@ p {
 .tile {
 	background: black;
 	border-radius: 10%;
+	position: relative;
 }
 
 .footer {
