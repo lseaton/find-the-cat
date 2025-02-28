@@ -4,6 +4,10 @@
 	--background-width: 600px;
 	--gray: rgb(164, 164, 164);
 }
+
+a {
+	color: var(--gray);
+}
 body {
 	margin: 0;
 	display: flex;

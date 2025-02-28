@@ -1,4 +1,3 @@
-//Remember to set catXPos to -1 again if it's a non-cat new grid
 //TODO: detect if user clicked the cat's area (on grid)
 
 let grid = document.getElementById("grid");
@@ -7,7 +6,7 @@ let catYPos = -1;
 let catHeight = -1;
 let catWidth = -1;
 
-populateGrid(16, false); //default
+populateGrid(16, true); //default
 
 function populateGrid(size, isCatMode) {
 	for (let i = 0; i < size * size; i++) {
@@ -28,6 +27,35 @@ function populateGrid(size, isCatMode) {
 function revealColor(e) {
 	let tile = document.getElementById(e.target.id);
 	tile.style.background = "transparent";
+}
+
+function showSettings() {
+	document.getElementById("settings").style.visibility = "visible";
+}
+
+//Removes current grid and generates new grid given certain settings
+function reset() {
+	//Hide settings menu
+	document.getElementById("settings").style.visibility = "hidden";
+	//Remove tiles
+	while (grid.firstChild) {
+		grid.removeChild(grid.lastChild);
+	}
+	//Remove cat image
+	let catImg = document.getElementById("cat-img");
+	if (catImg != null) {
+		catImg.parentNode.removeChild(catImg);
+	}
+
+	//Reset catPos
+	catXPos = -1;
+	catYPos = -1;
+
+	//Repopulate the grid with user-provided settings
+	populateGrid(
+		document.getElementById("pixel-size").value,
+		document.getElementById("cat-mode").checked
+	);
 }
 
 function getRandomCatImg() {
@@ -64,30 +92,11 @@ function foundCat() {
 	prompt("You found the cat!");
 }
 
-function showSettings() {
-	document.getElementById("settings").style.visibility = "visible";
-}
-
-//Removes current grid and generates new grid given certain settings
-function goButton() {
-	//Hide settings menu
-	document.getElementById("settings").style.visibility = "hidden";
-	//Remove tiles
-	while (grid.firstChild) {
-		grid.removeChild(grid.lastChild);
-	}
-	//Remove cat image
+//Checks if a cat is under where they are clicking
+function checkClick() {
 	let catImg = document.getElementById("cat-img");
 	if (catImg != null) {
-		catImg.parentNode.removeChild(catImg);
+		//catImg.parentNode.removeChild(catImg);
+		console.log("check");
 	}
-	//Reset catPos
-	catXPos = -1;
-	catYPos = -1;
-
-	//Repopulate the grid with user-provided settings
-	populateGrid(
-		document.getElementById("pixel-size").value,
-		document.getElementById("cat-mode").checked
-	);
 }
