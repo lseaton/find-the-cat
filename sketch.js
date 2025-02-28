@@ -22,18 +22,29 @@ function getRandomCatImg() {
 	return "./img/cats/cat-" + (Math.floor(Math.random() * 5) + 1) + ".jpg";
 }
 
+//Hides a random cat photo behind the tiles on the grid
 function hideCat() {
-	//Hides a random cat photo behind the tiles on the grid
 	let cat = document.createElement("img");
+	cat.id = "catImg";
 	cat.src = getRandomCatImg();
 	cat.style.width = "100px";
-	//Position cat in a random place within the drawing area
 	cat.style.position = "absolute";
-	cat.style.margin = "50px 0 0 -150px";
 
+	//Insert cat + reorder nodes so that cat picture is behind grid and in front of background
 	let grid = document.getElementById("grid");
 	let parentDiv = grid.parentNode;
 	parentDiv.insertBefore(cat, grid);
+
+	//Give the image random margins within the drawing area
+	//Given a width of 100px, only one cat image has a height of 130 - number 4. Every other image has a height of 70.
+	let height = 70;
+	if (cat.src.indexOf("4") > -1) {
+		height = 130;
+	}
+	let randomX = Math.floor(Math.random() * 461) - 565;
+	let randomY = Math.floor(Math.random() * (491 - height)) + 5;
+	let marginStr = randomY.toString() + "px 0 0 " + randomX.toString() + "px";
+	cat.style.margin = marginStr;
 }
 hideCat();
 populateGrid(gridSize);

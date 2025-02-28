@@ -52,7 +52,7 @@ p {
 }
 .tile {
 	background: black;
-	border-radius: 10%;
+	/*border-radius: 10%;*/
 	position: relative;
 }
 
