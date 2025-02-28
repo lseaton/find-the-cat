@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=MedievalSharp&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
 	--background-width: 600px;
+	--gray: rgb(164, 164, 164);
 }
 body {
 	margin: 0;
@@ -8,20 +11,25 @@ body {
 	align-items: center;
 	background-image: url("./img/galaxy-rainbow.jpg");
 	background-size: cover;
+	font-family: Macondo Swash Caps, sans-serif;
 }
 p {
 	color: white;
 }
 
+#drawing-area {
+	margin-top: 50px;
+}
+
 #grid {
-	margin: 5px;
-	width: 560px;
-	height: 560px;
+	margin: 3px;
+	width: 563px; /*Intentionally going onto the margin to account for differing browser renderings*/
+	height: 563px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	margin-top: -569px;
+	margin-top: -570px;
 }
 
 #background {
@@ -31,17 +39,41 @@ p {
 
 .main {
 	display: flex;
-	gap: 40px;
+	gap: 50px;
 }
 
-#generateBtn {
+button {
 	background: #056ca3;
 	color: white;
+	font-family: inherit;
+	font-size: inherit;
 	border: none;
-	border-radius: 10px;
-	margin: 10px 0px 0px 19px;
+	border-radius: 8px;
+}
+button:hover {
+	background: #2e98d2;
+}
+#generateBtn {
+	margin-top: 10px;
+	margin-bottom: 10px;
 	width: 189px;
 	height: 30px;
+}
+
+#settings {
+	border-style: solid;
+	border-color: var(--gray);
+	padding: 5px;
+	visibility: hidden;
+	background: rgba(78, 138, 172, 0.25);
+}
+#settings p {
+	margin: 5px;
+}
+#goBtn {
+	width: 40px;
+	height: 30px;
+	margin: 5px 0px 5px 40%;
 }
 
 .right-side {
@@ -52,16 +84,16 @@ p {
 }
 .tile {
 	background: black;
-	/*border-radius: 10%;*/
 	position: relative;
 }
 
 .footer {
 	width: 100%;
-	height: 70px;
-	background: rgb(164, 164, 164);
+	height: 45px;
+	background: var(--gray);
 	position: fixed;
 	bottom: 0;
 	text-align: center;
-	line-height: 0.5;
+	line-height: 0.4;
+	font-size: 12px;
 }

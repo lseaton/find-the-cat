@@ -20,19 +20,25 @@
 			</div>
 			<div class="right-side">
 				<img src="./img/space-cat.png" width="180px" alt="A cat in space" />
-				<div class="generator">
-					<button id="generateBtn">Generate a new grid</button>
-					<p>Pixel size:</p>
-					<input
-						type="range"
-						min="4"
-						max="70"
-						value="35"
-						class="slider"
-						id="pixelSize"
-					/>
-					<p>Hover mode/drag mode (toggle)<input type="checkbox" /></p>
-					<p>Find the cat mode (check)<input type="checkbox" /></p>
+
+				<button id="generateBtn" onclick="showSettings()">
+					&darr; Generate new grid &darr;
+				</button>
+				<div id="settings">
+					<p>
+						Pixel size:
+						<input
+							type="range"
+							min="4"
+							max="40"
+							value="16"
+							class="slider"
+							id="pixel-size"
+						/>
+					</p>
+					<p>Drag mode: <input type="checkbox" id="drag-mode" /></p>
+					<p>Find the cat mode: <input type="checkbox" id="cat-mode" /></p>
+					<button id="goBtn" onclick="goButton()">Go!</button>
 				</div>
 			</div>
 		</div>
