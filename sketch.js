@@ -94,19 +94,52 @@ function foundCat() {
 	prompt("You found the cat!");
 }
 
+function isAtop(obj1, obj2) {
+	let rect = obj2.getBoundingClientRect();
+	return (
+		obj1.clientX >= rect.left &&
+		obj1.clientX <= rect.right &&
+		obj1.clientY >= rect.top &&
+		obj1.clientY <= rect.bottom
+	);
+}
+
+//Checks if there are any black tiles covering the cat image still
+function checkForTilesCovering() {
+	let catImg = document.getElementById("cat-img");
+	let rect2 = catImg.getBoundingClientRect();
+	let tiles = grid.children;
+
+	for (let i = 0; i < tiles.length; i++) {
+		let rect1 = tiles[i].getBoundingClientRect();
+		if (
+			getComputedStyle(tiles[i]).background !=
+			"rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
+		) {
+			if (
+				rect1.left <= rect2.right &&
+				rect1.right >= rect2.left &&
+				rect1.top <= rect2.bottom &&
+				rect1.bottom >= rect2.top
+			) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 //Checks if a cat is under where they are clicking
 function checkClick(event) {
 	let catImg = document.getElementById("cat-img");
 	if (catImg != null) {
-		console.log(event.clientX + ", " + event.clientY); //event.target = the tile it's over
-		let rect = catImg.getBoundingClientRect();
-		if (
-			event.clientX >= rect.left &&
-			event.clientX <= rect.right &&
-			event.clientY >= rect.top &&
-			event.clientY <= rect.bottom
-		) {
-			console.log("within range");
+		if (isAtop(event, catImg)) {
+			console.log("You found the cat!");
+			console.log(
+				checkForTilesCovering()
+					? "But it's still dirty!"
+					: "And it's nice and clean!"
+			);
 		}
 	}
 }
