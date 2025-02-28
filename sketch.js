@@ -1,5 +1,3 @@
-//TODO: detect if user clicked the cat's area (on grid)
-
 let grid = document.getElementById("grid");
 let catXPos = -1;
 let catYPos = -1;
@@ -90,10 +88,6 @@ function hideCat() {
 	cat.style.margin = marginStr;
 }
 
-function foundCat() {
-	prompt("You found the cat!");
-}
-
 function isAtop(obj1, obj2) {
 	let rect = obj2.getBoundingClientRect();
 	return (
@@ -131,15 +125,15 @@ function checkForTilesCovering() {
 
 //Checks if a cat is under where they are clicking
 function checkClick(event) {
+	let alertMessage = "";
 	let catImg = document.getElementById("cat-img");
 	if (catImg != null) {
 		if (isAtop(event, catImg)) {
-			console.log("You found the cat!");
-			console.log(
-				checkForTilesCovering()
-					? "But it's still dirty!"
-					: "And it's nice and clean!"
-			);
+			alertMessage += "You found the cat, ";
+			alertMessage += checkForTilesCovering()
+				? "but she's still dirty!"
+				: "and she's nice and clean!\nฅ^•ﻌ•^ฅ";
+			alert(alertMessage);
 		}
 	}
 }
