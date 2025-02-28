@@ -1,3 +1,5 @@
+//TODO: Finish README.md and add text over the grid that says "find the cat and click on her!" which disappears when the mouse enters the grid
+//TODO: Stylize radio buttons and slider
 let grid = document.getElementById("grid");
 let catXPos = -1;
 let catYPos = -1;
@@ -20,7 +22,7 @@ function populateGrid(size, isCatMode) {
 	}
 	if (isCatMode) {
 		hideCat();
-		//add text over grid that says "free the cat!" and gives instructions, which disappears when mouse enters the grid"
+		//Add free the cat text
 	}
 }
 

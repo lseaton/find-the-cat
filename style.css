@@ -17,7 +17,8 @@ body {
 	background-size: cover;
 	font-family: Macondo Swash Caps, sans-serif;
 }
-p {
+p,
+label {
 	color: white;
 }
 

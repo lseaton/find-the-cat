@@ -36,9 +36,21 @@
 							id="pixel-size"
 						/>
 					</p>
-					<p>
-						Find the cat mode: <input type="checkbox" id="cat-mode" checked />
-					</p>
+					<input
+						type="radio"
+						id="cat-mode"
+						name="mode"
+						value="cat-mode"
+						checked="checked"
+					/>
+					<label for="cat-mode">Find the cat mode</label><br />
+					<input
+						type="radio"
+						id="drawing-mode"
+						name="mode"
+						value="drawing-mode"
+					/>
+					<label for="drawing-mode">Drawing mode</label><br />
 					<button id="goBtn" onclick="reset()">Go!</button>
 				</div>
 			</div>
