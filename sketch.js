@@ -1,15 +1,13 @@
-//TODO: If the cat is found and clicked, draw new grid
 //Remember to set catXPos to -1 again if it's a non-cat new grid
 //TODO: detect if user clicked the cat's area (on grid)
 
 let grid = document.getElementById("grid");
-let gridSize = 16;
 let catXPos = -1;
 let catYPos = -1;
 let catHeight = -1;
 let catWidth = -1;
 
-populateGrid(gridSize, false); //default
+populateGrid(16, false); //default
 
 function populateGrid(size, isCatMode) {
 	for (let i = 0; i < size * size; i++) {
@@ -40,7 +38,7 @@ function getRandomCatImg() {
 //Hides a random cat photo behind the tiles on the grid
 function hideCat() {
 	let cat = document.createElement("img");
-	cat.id = "catImg";
+	cat.id = "cat-img";
 	cat.src = getRandomCatImg();
 	cat.style.width = "100px";
 	cat.style.position = "absolute";
@@ -79,10 +77,14 @@ function goButton() {
 		grid.removeChild(grid.lastChild);
 	}
 	//Remove cat image
-	let catImg = document.querySelector("catImg");
+	let catImg = document.getElementById("cat-img");
 	if (catImg != null) {
 		catImg.parentNode.removeChild(catImg);
 	}
+	//Reset catPos
+	catXPos = -1;
+	catYPos = -1;
+
 	//Repopulate the grid with user-provided settings
 	populateGrid(
 		document.getElementById("pixel-size").value,
