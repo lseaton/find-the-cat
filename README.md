@@ -1,6 +1,6 @@
 <h2>Project: Etch-a-Sketch from The Odin Project</h2>
 <p>A mini drawing game in which you attempt to find the hidden cat within a grid of pixels.</p>
-<p>See the live here: https://lseaton.github.io/find-the-cat.</p>
+<p>See the live here: https://lseaton.github.io/find-the-cat. Tested for Chrome.</p>
 <h3>Outcomes:</h3>
 <ul>Learned more about flexbox</ul>
 <ul>Learned more about layering in CSS and positioning elements accurately</ul>

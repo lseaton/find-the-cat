@@ -1,4 +1,6 @@
-//TODO: Finish README.md and add text over the grid in beginning outside functions that says "find the hidden cat and click on her!" which disappears when the mouse enters the grid
+//TODO: Add text over the grid in beginning outside functions that says "find the hidden cat and click on her!" which disappears when the mouse enters the grid
+//TODO: Oh dear the firefox version thinks the cat is dirty no matter what. Time to debug
+//TODO: Also bug on firefox: It won't always populate the grid correctly
 let grid = document.getElementById("grid");
 let catXPos = -1;
 let catYPos = -1;
