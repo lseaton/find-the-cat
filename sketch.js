@@ -1,5 +1,4 @@
-//TODO: Finish README.md and add text over the grid that says "find the cat and click on her!" which disappears when the mouse enters the grid
-//TODO: Stylize radio buttons and slider
+//TODO: Finish README.md and add text over the grid in beginning outside functions that says "find the hidden cat and click on her!" which disappears when the mouse enters the grid
 let grid = document.getElementById("grid");
 let catXPos = -1;
 let catYPos = -1;
@@ -7,7 +6,7 @@ let catHeight = -1;
 let catWidth = -1;
 
 populateGrid(16, true); //default
-document.getElementById("drawing-area").addEventListener("click", checkClick);
+grid.addEventListener("click", checkClick);
 
 function populateGrid(size, isCatMode) {
 	for (let i = 0; i < size * size; i++) {
@@ -18,11 +17,14 @@ function populateGrid(size, isCatMode) {
 		d.style.height =
 			grid.getBoundingClientRect().height / size.toString() + "px";
 		d.addEventListener("mouseover", revealColor);
-		document.getElementById("grid").appendChild(d);
+		grid.appendChild(d);
 	}
 	if (isCatMode) {
+		document.title = "Find the Cat";
 		hideCat();
 		//Add free the cat text
+	} else {
+		document.title = "Sketchpad";
 	}
 }
 
@@ -34,11 +36,13 @@ function revealColor(e) {
 function showSettings() {
 	document.getElementById("settings").style.visibility = "visible";
 }
+function hideSettings() {
+	document.getElementById("settings").style.visibility = "hidden";
+}
 
 //Removes current grid and generates new grid given certain settings
 function reset() {
-	//Hide settings menu
-	document.getElementById("settings").style.visibility = "hidden";
+	hideSettings();
 	//Remove tiles
 	while (grid.firstChild) {
 		grid.removeChild(grid.lastChild);
@@ -48,11 +52,9 @@ function reset() {
 	if (catImg != null) {
 		catImg.parentNode.removeChild(catImg);
 	}
-
 	//Reset catPos
 	catXPos = -1;
 	catYPos = -1;
-
 	//Repopulate the grid with user-provided settings
 	populateGrid(
 		document.getElementById("pixel-size").value,

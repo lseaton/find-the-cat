@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=MedievalSharp&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-	--background-width: 600px;
 	--gray: rgb(164, 164, 164);
+	--blue-translucent: rgba(78, 138, 172, 0.25);
 }
 
-a {
-	color: var(--gray);
-}
 body {
 	margin: 0;
 	display: flex;
@@ -17,9 +14,14 @@ body {
 	background-size: cover;
 	font-family: Macondo Swash Caps, sans-serif;
 }
+
 p,
 label {
 	color: white;
+}
+
+a {
+	color: var(--gray);
 }
 
 #drawing-area {
@@ -28,7 +30,7 @@ label {
 
 #grid {
 	margin: 3px;
-	width: 563px; /*Intentionally going onto the margin to account for differing browser renderings*/
+	width: 563px; /*Intentionally going slightly onto the margin to account for differing browser renderings*/
 	height: 563px;
 	display: flex;
 	justify-content: flex-start;
@@ -55,9 +57,11 @@ button {
 	border: none;
 	border-radius: 8px;
 }
+
 button:hover {
 	background: #2e98d2;
 }
+
 #generateBtn {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -70,11 +74,13 @@ button:hover {
 	border-color: var(--gray);
 	padding: 5px;
 	visibility: hidden;
-	background: rgba(78, 138, 172, 0.25);
+	background: var(--blue-translucent);
 }
+
 #settings p {
 	margin: 5px;
 }
+
 #goBtn {
 	width: 40px;
 	height: 30px;
@@ -95,7 +101,7 @@ button:hover {
 .footer {
 	width: 100%;
 	height: 45px;
-	background: rgba(78, 138, 172, 0.25);
+	background: var(--blue-translucent);
 	position: fixed;
 	bottom: 0;
 	text-align: center;

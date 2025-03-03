@@ -1,13 +1,16 @@
-<p>Note: This README is in-progress while the project is still underway
-<br></br>
 <h2>Project: Etch-a-Sketch from The Odin Project</h2>
-A pixel-drawing program with a twist.
-<h3>Outcomes (goals for now):</h3>
+A mini drawing game in which you attempt to find the hidden cat within a grid of pixels.
+<h3>Outcomes:</h3>
 <ul>Learned more about flexbox</ul>
+<ul>Learned more about layering in CSS and positioning elements accurately</ul>
 <ul>Created something pretty and functional</ul>
-<h3>Screenshot:</h3>
 <h3>Tools:</h3>
 <ul>Visual Studio Code, Git, Github, Pixabay, Flaticon.</ul>
+<h3>Screenshots:</h3>
+![Screenshot of drawing mode](./img/drawing-mode-screenshot.png?raw=true "Drawing mode")
+![Screenshot of the new grid generator](./img/generator-screenshot.png?raw=true "The new grid generator")
+![Screenshot of alert saying "You found the cat, but she's still dirty!"](./img/dirty-cat-screenshot.png?raw=true "User found the cat image, but there are still pixels covering it")
+![Screenshot of alert saying "You found the cat, and she's nice and clean!"](./img/clean-cat-screenshot.png?raw=true "User found the cat and removed all the pixels covering it")
 <h3>Credits:</h3>
 <ul>Color wheel from <a href="https://pixabay.com/users/thedigitalartist-202249/">TheDigitalArtist</a></ul>
 <ul>Background galaxy rainbow from <a href="https://pixabay.com/users/geralt-9301/">geralt</a></ul>
