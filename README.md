@@ -1,20 +1,21 @@
 <h2>Project: Etch-a-Sketch from The Odin Project</h2>
-A mini drawing game in which you attempt to find the hidden cat within a grid of pixels.
+<p>A mini drawing game in which you attempt to find the hidden cat within a grid of pixels.</p>
+<p>See the live here: https://lseaton.github.io/find-the-cat.</p>
 <h3>Outcomes:</h3>
 <ul>Learned more about flexbox</ul>
 <ul>Learned more about layering in CSS and positioning elements accurately</ul>
 <ul>Created something pretty and functional</ul>
 <h3>Tools:</h3>
-<ul>Visual Studio Code, Git, Github, Pixabay, Flaticon.</ul>
+<ul>Visual Studio Code, Git, Github, Pixabay, Flaticon</ul>
 <h3>Screenshots:</h3>
 Drawing mode
-<img src="./img/drawing-mode-screenshot.png" alt="Screenshot of drawing mode" width="800px">
+<img src="./img/drawing-mode-screenshot.png" alt="Screenshot of drawing mode" width="600px">
 The new grid generator
-<img src="./img/generator-screenshot.png" alt="Screenshot of the new grid generator" width="400px">
+<img src="./img/generator-screenshot.png" alt="Screenshot of the new grid generator" width="300px">
 User found the cat image, but there are still pixels covering it
-<img src="./img/dirty-cat-screenshot.png" alt="Screenshot of alert saying 'You found the cat, but she's still dirty!'" width="800px">
+<img src="./img/dirty-cat-screenshot.png" alt="Screenshot of alert saying 'You found the cat, but she's still dirty!'" width="600px">
 User found the cat and removed all the pixels covering it
-<img src="./img/clean-cat-screenshot.png" alt="Screenshot of alert saying 'You found the cat, and she's nice and clean!'" width="800px">
+<img src="./img/clean-cat-screenshot.png" alt="Screenshot of alert saying 'You found the cat, and she's nice and clean!'" width="600px">
 <h3>Credits:</h3>
 <ul>Color wheel from <a href="https://pixabay.com/users/thedigitalartist-202249/">TheDigitalArtist</a></ul>
 <ul>Background galaxy rainbow from <a href="https://pixabay.com/users/geralt-9301/">geralt</a></ul>
