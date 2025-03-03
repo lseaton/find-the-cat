@@ -7,10 +7,10 @@ A mini drawing game in which you attempt to find the hidden cat within a grid of
 <h3>Tools:</h3>
 <ul>Visual Studio Code, Git, Github, Pixabay, Flaticon.</ul>
 <h3>Screenshots:</h3>
-![Screenshot of drawing mode](img/drawing-mode-screenshot.png?raw=true "Drawing mode")
-![Screenshot of the new grid generator](img/generator-screenshot.png?raw=true "The new grid generator")
-![Screenshot of alert saying "You found the cat, but she's still dirty!"](img/dirty-cat-screenshot.png?raw=true "User found the cat image, but there are still pixels covering it")
-![Screenshot of alert saying "You found the cat, and she's nice and clean!"](img/clean-cat-screenshot.png?raw=true "User found the cat and removed all the pixels covering it")
+![Screenshot of drawing mode](/img/drawing-mode-screenshot.png?raw=true "Drawing mode")
+![Screenshot of the new grid generator](/img/generator-screenshot.png?raw=true "The new grid generator")
+![Screenshot of alert saying "You found the cat, but she's still dirty!"](/img/dirty-cat-screenshot.png?raw=true "User found the cat image, but there are still pixels covering it")
+![Screenshot of alert saying "You found the cat, and she's nice and clean!"](/img/clean-cat-screenshot.png?raw=true "User found the cat and removed all the pixels covering it")
 <h3>Credits:</h3>
 <ul>Color wheel from <a href="https://pixabay.com/users/thedigitalartist-202249/">TheDigitalArtist</a></ul>
 <ul>Background galaxy rainbow from <a href="https://pixabay.com/users/geralt-9301/">geralt</a></ul>
