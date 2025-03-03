@@ -20,6 +20,7 @@ User found the cat and removed all the pixels covering it
 <ul>Color wheel from <a href="https://pixabay.com/users/thedigitalartist-202249/">TheDigitalArtist</a></ul>
 <ul>Background galaxy rainbow from <a href="https://pixabay.com/users/geralt-9301/">geralt</a></ul>
 <ul>Mini raindow icon from <a href="https://www.flaticon.com/authors/freepik">Freepik</a></ul>
+<ul>Space cat drawing from <a href="https://pixabay.com/users/barnabas-moro-27712939/">Barnabas-Moro</a></ul>
 <ul>Cat images from:
 <ul><a href="https://pixabay.com/users/pikabum-273706/">pikabum</a></ul>
 <ul><a href="https://pixabay.com/users/ksiazkizszafy-22644445/">ksiazkizszafy</a></ul>
