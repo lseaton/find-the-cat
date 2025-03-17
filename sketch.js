@@ -1,5 +1,5 @@
 //TODO: Add text over the grid in beginning outside functions that says "find the hidden cat and click on her!" which disappears when the mouse enters the grid
-//TODO: Bug on firefox: It won't always populate the grid correctly
+//TODO: Bug on firefox: There are still some populateGrid problems when size is near the maximum value allowed, leaving gaps
 let grid = document.getElementById("grid");
 let catXPos = -1;
 let catYPos = -1;
@@ -14,9 +14,10 @@ function populateGrid(size, isCatMode) {
 		let d = document.createElement("div");
 		d.className = "tile";
 		d.id = "tile" + i.toString(); //unique ID
-		d.style.width = grid.getBoundingClientRect().width / size.toString() + "px";
-		d.style.height =
-			grid.getBoundingClientRect().height / size.toString() + "px";
+		d.style.width = (100 / size).toString() + "%";
+		d.style.height = (100 / size).toString() + "%";
+		/*d.style.width = tileWidth.toString() + "px";
+		d.style.height = tileHeight.toString() + "px";*/
 		d.addEventListener("mouseover", revealColor);
 		grid.appendChild(d);
 	}
