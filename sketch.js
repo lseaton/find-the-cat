@@ -112,10 +112,10 @@ function checkForTilesCovering() {
 
 	for (let i = 0; i < tiles.length; i++) {
 		let rect1 = tiles[i].getBoundingClientRect();
-		if (
-			getComputedStyle(tiles[i]).background !=
-			"rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
-		) {
+		let tileBackground = window
+			.getComputedStyle(tiles[i], null)
+			.getPropertyValue("background-color");
+		if (tileBackground != "rgba(0, 0, 0, 0)") {
 			if (
 				rect1.left <= rect2.right &&
 				rect1.right >= rect2.left &&
@@ -136,7 +136,8 @@ function checkClick(event) {
 	if (catImg != null) {
 		if (isAtop(event, catImg)) {
 			alertMessage += "You found the cat, ";
-			alertMessage += checkForTilesCovering()
+			let isDirty = checkForTilesCovering();
+			alertMessage += isDirty
 				? "but she's still dirty!"
 				: "and she's nice and clean!\nฅ^•ﻌ•^ฅ";
 			alert(alertMessage);
