@@ -1,6 +1,5 @@
 //TODO: Add text over the grid in beginning outside functions that says "find the hidden cat and click on her!" which disappears when the mouse enters the grid
-//TODO: Oh dear the firefox version thinks the cat is dirty no matter what. Time to debug
-//TODO: Also bug on firefox: It won't always populate the grid correctly
+//TODO: Bug on firefox: It won't always populate the grid correctly
 let grid = document.getElementById("grid");
 let catXPos = -1;
 let catYPos = -1;
@@ -107,20 +106,20 @@ function isAtop(obj1, obj2) {
 //Checks if there are any black tiles covering the cat image still
 function checkForTilesCovering() {
 	let catImg = document.getElementById("cat-img");
-	let rect2 = catImg.getBoundingClientRect();
+	let rectCat = catImg.getBoundingClientRect();
 	let tiles = grid.children;
 
 	for (let i = 0; i < tiles.length; i++) {
-		let rect1 = tiles[i].getBoundingClientRect();
+		let rectTile = tiles[i].getBoundingClientRect();
 		let tileBackground = window
 			.getComputedStyle(tiles[i], null)
 			.getPropertyValue("background-color");
 		if (tileBackground != "rgba(0, 0, 0, 0)") {
 			if (
-				rect1.left <= rect2.right &&
-				rect1.right >= rect2.left &&
-				rect1.top <= rect2.bottom &&
-				rect1.bottom >= rect2.top
+				rectTile.left <= rectCat.right &&
+				rectTile.right >= rectCat.left &&
+				rectTile.top <= rectCat.bottom &&
+				rectTile.bottom >= rectCat.top
 			) {
 				return true;
 			}
